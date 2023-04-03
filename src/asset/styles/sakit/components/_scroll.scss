@@ -1,0 +1,56 @@
+$track-default-color: $sakit-scroll-track-color-default;
+$thumb-border-default-color: $sakit-scroll-thumb-border-color-default;
+$track-modern-color: $sakit-scroll-modern-track-color-default;
+$thumb-border-modern-color: $track-modern-color;
+$thumb-modern-color: $sakit-scroll-modern-thumb-border-color-default;
+$transition: $sakit-scroll-transition;
+
+.scroll {
+  &::-webkit-scrollbar-track
+  {
+    border-radius: 2px;
+    transition: background-color $transition;
+  }
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    -webkit-transition: width $transition;
+    -moz-transition: width $transition;
+    -o-transition: width $transition;
+    transition: width $transition;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border: 2px solid;
+    border-radius: 4px;
+  }
+
+  &-default {
+    @extend .scroll;
+    &::-webkit-scrollbar-track {
+      background-color: $track-default-color;
+    }
+
+    &::-webkit-scrollbar {
+      background-color: $track-default-color;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-color: $thumb-border-default-color;
+    }
+  }
+
+  &-modern {
+    @extend .scroll;
+    &::-webkit-scrollbar {
+      background-color: $track-modern-color;
+      width: 12px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border: 3px solid $thumb-border-modern-color;
+      border-radius: 10px;
+      background-color: $thumb-modern-color;
+    }
+  }
+}

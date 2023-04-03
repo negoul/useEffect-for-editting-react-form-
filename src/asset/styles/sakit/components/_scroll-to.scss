@@ -1,0 +1,98 @@
+$position-size: $sakit-scroll-to-position-offset;
+$darken-amount: $sakit-scroll-to-hover-percentage;
+$button-circle-size: $sakit-scroll-to-size;
+$color-muted: $sakit-scroll-to-dark-text;
+$color-white: $sakit-scroll-to-light-text;
+$shadow: $sakit-scroll-to-shadow;
+$transition: $sakit-scroll-to-transition;
+
+$scroll-to-colors: (
+  default: $sakit-scroll-to-color-default,
+  primary: $sakit-scroll-to-color-primary,
+  secondary: $sakit-scroll-to-color-secondary,
+  danger: $sakit-scroll-to-color-danger,
+  warning: $sakit-scroll-to-color-warning,
+  info: $sakit-scroll-to-color-info,
+);
+
+@mixin getScrollStyle($color, $important) {
+  @if($important == true) {
+    background: map_get($scroll-to-colors, $color) !important;
+  } @else {
+    background: map_get($scroll-to-colors, $color);
+  }
+  @if ($color == default) {
+    @if($important == true) {
+      color: $color-muted !important;
+      border: 1px solid lighten($color-muted, 30%) !important;
+    } @else {
+      color: $color-muted;
+      border: 1px solid lighten($color-muted, 30%);
+    }
+  }
+  @else if ($color != default) {
+    @if($important == true) {
+      color: $color-white !important;
+      border: none !important;
+    } @else {
+      color: $color-white;
+      border: none;
+    }
+  }
+  &:hover {
+    @if($important == true) {
+      background: darken(map_get($scroll-to-colors, $color), $darken-amount) !important;
+    } @else {
+      background: darken(map_get($scroll-to-colors, $color), $darken-amount);
+    }
+  }
+}
+
+.scroll-to {
+  align-items: center;
+  border: none;
+  border-radius: $button-circle-size;
+  box-shadow: $shadow;
+  cursor: pointer;
+  display: flex;
+  height: $button-circle-size;
+  justify-content: center;
+  outline: none;
+  padding: 6px;
+  position: absolute;
+  transform: translateY(0);
+  transition: $transition;
+  transition-property: background-color, transform !important;
+  width: $button-circle-size;
+  z-index: 999;
+
+  @each $color in map_keys($scroll-to-colors) {
+    &-#{$color} {
+      @extend .scroll-to;
+      @include getScrollStyle($color, false);
+    }
+  }
+
+  &__parent {
+    overflow: hidden !important;
+    position: relative !important;
+  }
+
+  &--deactivate {
+    transform: translateY(100px) !important;
+  }
+
+  &__position-bottom {
+    @extend .scroll-to;
+    bottom: $position-size;
+    &-right {
+      @extend .scroll-to__position-bottom;
+      right: $position-size;
+    }
+
+    &-left {
+      @extend .scroll-to__position-bottom;
+      left: $position-size;
+    }
+  }
+}

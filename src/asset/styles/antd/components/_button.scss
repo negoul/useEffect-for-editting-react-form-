@@ -1,0 +1,18 @@
+.ant-btn-link {
+  & > span {
+    @include primary-font-family('medium');
+  }
+}
+
+.react_button_contained_primary {
+  background-color: #00913e;
+  color: #fff;
+  border: 1px solid #00913e;;
+}
+
+
+.react_button_contained_primary:hover {
+  background-color: #00913e;
+  color: #fff;
+  border: 1px solid #00913e;;
+}

@@ -1,0 +1,40 @@
+$sakit-font-size-base: var(--font-size-base);
+$sakit-height-step: 50;
+$sakit-width-step: 50;
+$sakit-padding-step: 4;
+$sakit-margin-step: 4;
+$sakit-top-step: 4;
+$sakit-left-step: 4;
+$sakit-bottom-step: 4;
+$sakit-right-step: 4;
+//$sakit-transition: var(--transition);
+$sakit-border-radius-base: var(--border-radius-base);
+$sakit-border-radius-step: 2px;
+
+// LABEL
+$sakit-label-transition: var(--transition);
+$sakit-label-size-base: 20px;
+$sakit-label-border-size-base: 1px;
+$sakit-label-border-radius-size-base: var(--border-radius-base);
+$sakit-label-font-size-base: calc(var(--font-size-base) - 2px);
+$sakit-label-hover-percentage: $hover-percentage / 2;
+
+
+// TOAST
+$sakit-toast-hover-percentage: $hover-percentage;
+$sakit-toast-border-radius: var(--border-radius-base);
+$sakit-toast-transition: var(--transition);
+
+// SHADOW
+$sakit-box-shadow: var(--box-shadow);
+
+// SCROLL
+$sakit-scroll-transition: var(--transition);
+
+// SCROLL-TO
+$sakit-scroll-to-shadow: var(--box-shadow);
+$sakit-scroll-to-size: 30px;
+$sakit-scroll-to-hover-percentage: $hover-percentage;
+$sakit-scroll-to-position-offset: 15px;
+$sakit-scroll-to-transition: var(--transition);
+

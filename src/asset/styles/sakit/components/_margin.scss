@@ -1,0 +1,455 @@
+@import "../mixins/responsive";
+$margin-step-size: $sakit-margin-step;
+
+$margin-sizes: (
+  $margin-step-size * 1,
+  $margin-step-size * 2,
+  $margin-step-size * 3,
+  $margin-step-size * 4,
+  $margin-step-size * 5,
+  $margin-step-size * 6,
+  $margin-step-size * 7,
+  $margin-step-size * 8,
+  $margin-step-size * 9,
+  $margin-step-size * 10,
+  $margin-step-size * 11,
+  $margin-step-size * 12,
+  $margin-step-size * 13,
+  $margin-step-size * 14,
+  $margin-step-size * 15,
+  $margin-step-size * 16,
+  $margin-step-size * 17,
+  $margin-step-size * 18,
+  $margin-step-size * 19,
+  $margin-step-size * 20,
+  $margin-step-size * 21,
+  $margin-step-size * 22,
+  $margin-step-size * 23,
+  $margin-step-size * 24,
+  $margin-step-size * 25
+);
+
+
+@each $margin in $margin-sizes {
+  .margin {
+    &-#{$margin} {
+      margin: #{$margin}px;
+
+      &\@xs {
+        @include screen-xsmall {
+          margin: #{$margin}px;
+        }
+      }
+
+      &\@s {
+        @include screen-small {
+          margin: #{$margin}px;
+        }
+      }
+
+      &\@m {
+        @include screen-medium {
+          margin: #{$margin}px;
+        }
+      }
+
+      &\@l {
+        @include screen-large {
+          margin: #{$margin}px;
+        }
+      }
+
+      &\@xl {
+        @include screen-xlarge {
+          margin: #{$margin}px;
+        }
+      }
+
+      &\@xxl {
+        @include screen-xxlarge {
+          margin: #{$margin}px;
+        }
+      }
+    }
+
+    &-horizontal-#{$margin} {
+      margin-right: #{$margin}px;
+      margin-left: #{$margin}px;
+
+      &\@xs {
+        @include screen-xsmall {
+          margin-right: #{$margin}px;
+          margin-left: #{$margin}px;
+        }
+      }
+
+      &\@s {
+        @include screen-small {
+          margin-right: #{$margin}px;
+          margin-left: #{$margin}px;
+        }
+      }
+
+      &\@m {
+        @include screen-medium {
+          margin-right: #{$margin}px;
+          margin-left: #{$margin}px;
+        }
+      }
+
+      &\@l {
+        @include screen-large {
+          margin-right: #{$margin}px;
+          margin-left: #{$margin}px;
+        }
+      }
+
+      &\@xl {
+        @include screen-xlarge {
+          margin-right: #{$margin}px;
+          margin-left: #{$margin}px;
+        }
+      }
+
+      &\@xxl {
+        @include screen-xxlarge {
+          margin-right: #{$margin}px;
+          margin-left: #{$margin}px;
+        }
+      }
+    }
+
+    &-vertical-#{$margin} {
+      margin-top: #{$margin}px;
+      margin-bottom: #{$margin}px;
+
+      &\@xs {
+        @include screen-xsmall {
+          margin-top: #{$margin}px;
+          margin-bottom: #{$margin}px;
+        }
+      }
+
+      &\@s {
+        @include screen-small {
+          margin-top: #{$margin}px;
+          margin-bottom: #{$margin}px;
+        }
+      }
+
+      &\@m {
+        @include screen-medium {
+          margin-top: #{$margin}px;
+          margin-bottom: #{$margin}px;
+        }
+      }
+
+      &\@l {
+        @include screen-large {
+          margin-top: #{$margin}px;
+          margin-bottom: #{$margin}px;
+        }
+      }
+
+      &\@xl {
+        @include screen-xlarge {
+          margin-top: #{$margin}px;
+          margin-bottom: #{$margin}px;
+        }
+      }
+
+      &\@xxl {
+        @include screen-xxlarge {
+          margin-top: #{$margin}px;
+          margin-bottom: #{$margin}px;
+        }
+      }
+    }
+
+    &-top-#{$margin} {
+      margin-top: #{$margin}px;
+    }
+
+    &-right-#{$margin} {
+      margin-right: #{$margin}px;
+    }
+
+    &-bottom-#{$margin} {
+      margin-bottom: #{$margin}px;
+    }
+
+    &-left-#{$margin} {
+      margin-left: #{$margin}px;
+    }
+  }
+
+  .\!margin {
+    &-#{$margin} {
+      margin: #{$margin}px !important;
+
+      &\@xs {
+        @include screen-xsmall {
+          margin: #{$margin}px !important;
+        }
+      }
+
+      &\@s {
+        @include screen-small {
+          margin: #{$margin}px !important;
+        }
+      }
+
+      &\@m {
+        @include screen-medium {
+          margin: #{$margin}px !important;
+        }
+      }
+
+      &\@l {
+        @include screen-large {
+          margin: #{$margin}px !important;
+        }
+      }
+
+      &\@xl {
+        @include screen-xlarge {
+          margin: #{$margin}px !important;
+        }
+      }
+
+      &\@xxl {
+        @include screen-xxlarge {
+          margin: #{$margin}px !important;
+        }
+      }
+    }
+
+    &-horizontal-#{$margin} {
+      margin-right: #{$margin}px !important;
+      margin-left: #{$margin}px !important;
+
+      &\@xs {
+        @include screen-xsmall {
+          margin-right: #{$margin}px !important;
+          margin-left: #{$margin}px !important;
+        }
+      }
+
+      &\@s {
+        @include screen-small {
+          margin-right: #{$margin}px !important;
+          margin-left: #{$margin}px !important;
+        }
+      }
+
+      &\@m {
+        @include screen-medium {
+          margin-right: #{$margin}px !important;
+          margin-left: #{$margin}px !important;
+        }
+      }
+
+      &\@l {
+        @include screen-large {
+          margin-right: #{$margin}px !important;
+          margin-left: #{$margin}px !important;
+        }
+      }
+
+      &\@xl {
+        @include screen-xlarge {
+          margin-right: #{$margin}px !important;
+          margin-left: #{$margin}px !important;
+        }
+      }
+
+      &\@xxl {
+        @include screen-xxlarge {
+          margin-right: #{$margin}px !important;
+          margin-left: #{$margin}px !important;
+        }
+      }
+    }
+
+    &-vertical-#{$margin} {
+      margin-top: #{$margin}px !important;
+      margin-bottom: #{$margin}px !important;
+
+      &\@xs {
+        @include screen-xsmall {
+          margin-top: #{$margin}px !important;
+          margin-bottom: #{$margin}px !important;
+        }
+      }
+
+      &\@s {
+        @include screen-small {
+          margin-top: #{$margin}px !important;
+          margin-bottom: #{$margin}px !important;
+        }
+      }
+
+      &\@m {
+        @include screen-medium {
+          margin-top: #{$margin}px !important;
+          margin-bottom: #{$margin}px !important;
+        }
+      }
+
+      &\@l {
+        @include screen-large {
+          margin-top: #{$margin}px !important;
+          margin-bottom: #{$margin}px !important;
+        }
+      }
+
+      &\@xl {
+        @include screen-xlarge {
+          margin-top: #{$margin}px !important;
+          margin-bottom: #{$margin}px !important;
+        }
+      }
+
+      &\@xxl {
+        @include screen-xxlarge {
+          margin-top: #{$margin}px !important;
+          margin-bottom: #{$margin}px !important;
+        }
+      }
+    }
+
+    &-top-#{$margin} {
+      margin-top: #{$margin}px !important;
+    }
+
+    &-right-#{$margin} {
+      margin-right: #{$margin}px !important;
+    }
+
+    &-bottom-#{$margin} {
+      margin-bottom: #{$margin}px !important;
+    }
+
+    &-left-#{$margin} {
+      margin-left: #{$margin}px !important;
+    }
+  }
+
+  .margin-child {
+    &-#{$margin} > * {
+      margin: #{$margin}px;
+    }
+
+    &-horizontal-#{$margin} > * {
+      margin-right: #{$margin}px;
+      margin-left: #{$margin}px;
+    }
+
+    &-vertical-#{$margin} > * {
+      margin-top: #{$margin}px;
+      margin-bottom: #{$margin}px;
+    }
+
+    &-top-#{$margin} > * {
+      margin-top: #{$margin}px;
+    }
+
+    &-right-#{$margin} > * {
+      margin-right: #{$margin}px;
+    }
+
+    &-bottom-#{$margin} > * {
+      margin-bottom: #{$margin}px;
+    }
+
+    &-left-#{$margin} > * {
+      margin-left: #{$margin}px;
+    }
+  }
+
+  .\!margin-child {
+    &-#{$margin} > * {
+      margin: #{$margin}px !important;
+    }
+
+    &-horizontal-#{$margin} > * {
+      margin-right: #{$margin}px !important;
+      margin-left: #{$margin}px !important;
+    }
+
+    &-vertical-#{$margin} > * {
+      margin-top: #{$margin}px !important;
+      margin-bottom: #{$margin}px !important;
+    }
+
+    &-top-#{$margin} > * {
+      margin-top: #{$margin}px !important;
+    }
+
+    &-right-#{$margin} > * {
+      margin-right: #{$margin}px !important;
+    }
+
+    &-bottom-#{$margin} > * {
+      margin-bottom: #{$margin}px !important;
+    }
+
+    &-left-#{$margin} > * {
+      margin-left: #{$margin}px !important;
+    }
+  }
+}
+
+.margin-remove {
+  & {
+    margin: 0;
+  }
+
+  &-horizontal {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  &-vertical {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.\!margin-remove {
+  & {
+    margin: 0 !important;
+  }
+
+  &-horizontal {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  &-vertical {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+}
+
+.margin-auto {
+  & {
+    margin: auto;
+  }
+
+  &-horizontal {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.\!margin-auto {
+  & {
+    margin: auto !important;
+  }
+
+  &-horizontal {
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+}

@@ -1,0 +1,103 @@
+$height-step-size: $sakit-height-step;
+
+$height-sizes: (
+  $height-step-size * 1,
+  $height-step-size * 2,
+  $height-step-size * 3,
+  $height-step-size * 4,
+  $height-step-size * 5,
+  $height-step-size * 6,
+  $height-step-size * 7,
+  $height-step-size * 8,
+  $height-step-size * 9,
+  $height-step-size * 10,
+  $height-step-size * 11,
+  $height-step-size * 12,
+  $height-step-size * 13,
+  $height-step-size * 14,
+  $height-step-size * 15,
+  $height-step-size * 16,
+  $height-step-size * 17,
+  $height-step-size * 18,
+  $height-step-size * 19,
+  $height-step-size * 20,
+  $height-step-size * 21,
+  $height-step-size * 22,
+  $height-step-size * 23,
+  $height-step-size * 24,
+  $height-step-size * 25
+);
+
+@each $size in $height-sizes {
+  .height-#{$size} {
+    height: #{$size}px;
+  }
+
+  .\!height-#{$size} {
+    height: #{$size}px !important;
+  }
+
+  .min-height-#{$size} {
+    min-height: #{$size}px;
+  }
+
+  .\!min-height-#{$size} {
+    min-height: #{$size}px !important;
+  }
+
+  .max-height-#{$size} {
+    max-height: #{$size}px;
+  }
+
+  .\!max-height-#{$size} {
+    max-height: #{$size}px !important;
+  }
+}
+
+.height-expand {
+  height: 100%;
+}
+
+.\!height-expand {
+  height: 100% !important;
+}
+
+.min-height-expand {
+  min-height: 100%;
+}
+
+.\!min-height-expand {
+  min-height: 100% !important;
+}
+
+.height-auto {
+  height: auto ;
+}
+
+.\!height-auto {
+  height: auto !important;
+}
+
+.height-initial {
+  height: initial;
+}
+
+.\!height-initial {
+  height: initial !important;
+}
+
+.max-height-initial {
+  max-height: initial;
+}
+
+.\!max-height-initial {
+  max-height: initial !important;
+}
+
+.min-height-initial {
+  min-height: initial;
+}
+
+.\!min-height-initial {
+  min-height: initial !important;
+}

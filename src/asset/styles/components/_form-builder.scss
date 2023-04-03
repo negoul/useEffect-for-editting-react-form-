@@ -1,0 +1,24 @@
+.form-template{
+/*  border:1px solid red;*/
+ /* padding:20px;*/
+  max-width:600px
+}
+
+
+.form-builder{
+  padding: 10px;
+  &-item{
+    .ant-form-item-label{
+      min-width: 100px;
+      text-align: right;
+
+
+      & > label {
+
+      }
+    }
+    /*.ant-form-item-control{
+      min-width: 40px;
+    }*/
+  }
+}

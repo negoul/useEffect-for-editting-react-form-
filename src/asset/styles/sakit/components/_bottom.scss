@@ -1,0 +1,48 @@
+$bottom-step-size: $sakit-bottom-step;
+
+$bottom-sizes: (
+  $bottom-step-size * 0,
+  $bottom-step-size * 1,
+  $bottom-step-size * 2,
+  $bottom-step-size * 3,
+  $bottom-step-size * 4,
+  $bottom-step-size * 5,
+  $bottom-step-size * 6,
+  $bottom-step-size * 7,
+  $bottom-step-size * 8,
+  $bottom-step-size * 9,
+  $bottom-step-size * 10,
+  $bottom-step-size * 11,
+  $bottom-step-size * 12,
+  $bottom-step-size * 13,
+  $bottom-step-size * 14,
+  $bottom-step-size * 15,
+  $bottom-step-size * 16,
+  $bottom-step-size * 17,
+  $bottom-step-size * 18,
+  $bottom-step-size * 19,
+  $bottom-step-size * 20,
+  $bottom-step-size * 21,
+  $bottom-step-size * 22,
+  $bottom-step-size * 23,
+  $bottom-step-size * 24,
+  $bottom-step-size * 25
+);
+
+@each $size in $bottom-sizes {
+  .bottom-#{$size} {
+    bottom: #{$size}px;
+  }
+
+  .\!bottom-#{$size} {
+    bottom: #{$size}px !important;
+  }
+}
+
+.bottom-initial {
+  bottom: initial;
+}
+
+.\!bottom-initial {
+  bottom: initial !important;
+}

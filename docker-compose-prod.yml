@@ -1,0 +1,14 @@
+version: '3.3'
+
+services:
+  ccentral:
+    build:
+      context: .
+      dockerfile: docker/prod.Dockerfile
+    container_name: cconsole
+    env_file:
+      - src/environment/.env.production
+    ports:
+      - "3000:80/tcp"
+    volumes:
+      - '/app/node_modules'

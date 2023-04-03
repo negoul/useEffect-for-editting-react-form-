@@ -1,0 +1,12 @@
+.box {
+  &-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-border {
+    box-sizing: border-box;
+  }
+}
+

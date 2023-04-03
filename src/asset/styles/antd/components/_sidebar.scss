@@ -1,0 +1,49 @@
+.ant-menu-item {
+  padding-right: 16px !important;
+
+  &.ant-menu-item-selected {
+    .ant-menu-title-content{
+      @include primary-font-family('medium');
+    }
+  }
+}
+
+
+.ant-menu-submenu-title {
+  padding-right: 16px !important;
+  &.ant-menu-submenu-title {
+    .ant-menu-submenu-title{
+      @include primary-font-family('medium');
+    }
+  }
+
+}
+
+
+
+
+.ant-drawer-header {
+  .ant-drawer-header-title {
+    position: relative;
+    .ant-drawer-close {
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #fff;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    .ant-drawer-title{
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+//.logo{
+//  text-align: right;
+//  img{
+//    max-width: 85%;
+//  }
+//}

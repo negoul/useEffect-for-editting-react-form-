@@ -1,0 +1,135 @@
+$transition: var(--transition);
+
+
+
+.username{
+  width: 100% !important;
+  text-align:center !important ;
+  background-color: #108ee9 !important;
+  color: white !important;
+  font-size: 15px !important;
+}
+
+.provider{
+  width: 100% !important;
+  text-align:center !important ;
+  background-color: rgba(108, 30, 146, 0.9) !important;
+  color: white !important;
+  font-size: 15px !important;
+}
+
+
+.button{
+/*  width: 10% !important;*/
+  text-align:center !important ;
+  background-color: #00913e !important;
+  color: white !important;
+  font-size: 15px !important;
+  margin-bottom: 20px;
+  padding: 4px 15px !important;
+}
+
+.success{
+  width: 100% !important;
+  text-align:center !important ;
+  background-color: #00913e !important;
+  color: white !important;
+  font-size: 15px !important;
+}
+
+.error{
+  width: 100% !important;
+  text-align:center !important ;
+  background-color: #dd4b39 !important;
+  color: white !important;
+  font-size: 15px !important;
+}
+
+.statusCode1{
+  width: 100% !important;
+  text-align:center !important ;
+  color: white !important;
+  background-color: #00913e !important;
+  padding: 3px !important;
+  border-radius: 10px !important;
+}
+.statusCode2{
+  width: 100% !important;
+  text-align:center !important ;
+  color: white !important;
+  background-color: #006891 !important;
+  padding: 5px !important;
+  border-radius: 10px !important;
+}
+.statusCode3{
+  width: 100% !important;
+  text-align:center !important ;
+  color: white !important;
+  background-color: #830091 !important;
+  padding: 5px !important;
+  border-radius: 10px !important;
+}
+.statusCode4{
+  width: 100% !important;
+  text-align:center !important ;
+  color: white !important;
+  background-color: #65011f !important;
+  padding: 5px !important;
+  border-radius: 10px !important;
+}
+.statusCode5{
+  width: 100% !important;
+  text-align:center !important ;
+  color: white !important;
+  background-color: #653d01 !important;
+  padding: 5px !important;
+  border-radius: 10px !important;
+}
+.statusCode6{
+  width: 100% !important;
+  text-align:center !important ;
+  color: white !important;
+  background-color: #e08e22 !important;
+  padding: 5px !important;
+  border-radius: 10px !important;
+}
+.statusCode7{
+  width: 100% !important;
+  text-align:center !important ;
+  color: white !important;
+  background-color: #3f6501 !important;
+  padding: 5px !important;
+  border-radius: 10px !important;
+}
+.statusCode8{
+  width: 100% !important;
+  text-align:center !important ;
+  color: white !important;
+  background-color: #14b181 !important;
+  padding: 5px !important;
+  border-radius: 10px !important;
+}
+.statusCode9{
+  width: 100% !important;
+  text-align:center !important ;
+  color: white !important;
+  background-color: #b14614 !important;
+  padding: 5px !important;
+  border-radius: 10px !important;
+}
+.statusCode10{
+  width: 100% !important;
+  text-align:center !important ;
+  color: white !important;
+  background-color: #147ab1 !important;
+  padding: 5px !important;
+  border-radius: 10px !important;
+}
+
+
+.tag{
+  width: 100% !important;
+  text-align:center !important ;
+  marginBottom: '2px';
+  font-size: 15px !important;
+}

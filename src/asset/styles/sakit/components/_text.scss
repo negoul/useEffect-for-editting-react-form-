@@ -1,0 +1,147 @@
+$text-colors: (
+  white: $sakit-white-color,
+  muted: $sakit-muted-color,
+  light-muted: $sakit-muted-light-color,
+  black: $sakit-black-color,
+  dark: $sakit-dark-color,
+  link: $sakit-link-color,
+  danger: $sakit-danger-color
+);
+
+$text-sizes: (
+  inherit: inherit,
+  xxsmall: calc(#{$sakit-font-size-base} - 6px),
+  xsmall: calc(#{$sakit-font-size-base} - 4px),
+  small: calc(#{$sakit-font-size-base} - 2px),
+  dmedium: calc(#{$sakit-font-size-base} - 1px),
+  medium: $sakit-font-size-base,
+  umedium: calc(#{$sakit-font-size-base} + 1px),
+  large: calc(#{$sakit-font-size-base} + 2px),
+  xlarge: calc(#{$sakit-font-size-base} + 4px),
+  xxlarge: calc(#{$sakit-font-size-base} + 6px)
+);
+
+$text-aligns: (
+  left: left,
+  center: center,
+  right: right
+);
+
+$text-styles: (
+  inherit: inherit,
+  initial: initial,
+  italic: italic,
+  normal: normal,
+  oblique: oblique
+);
+
+.text {
+  &-ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  &-no-wrap {
+    white-space: nowrap;
+  }
+
+  &-break-spaces {
+    white-space: break-spaces;
+  }
+
+  &-plain {
+    & * {
+      color: inherit !important;
+      display: inline !important;
+      font-family: inherit !important;
+      font-style: normal !important;
+      font-weight: inherit !important;
+      padding: 0;
+      text-decoration: none !important;
+    }
+    & br {
+      display: none !important;
+    }
+  }
+}
+
+.\!text {
+  &-ellipsis {
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+  }
+
+  &-no-wrap {
+    white-space: nowrap !important;
+  }
+
+  &-break-spaces {
+    white-space: break-spaces !important;
+  }
+}
+
+@each $text in map_keys($text-sizes) {
+  .text-#{$text} {
+    font-size: map_get($text-sizes, $text);
+  }
+
+  .\!text-#{$text} {
+    font-size: map_get($text-sizes, $text) !important;
+  }
+}
+
+@each $align in map_keys($text-aligns) {
+  .text-#{$align} {
+    text-align: map_get($text-aligns, $align);
+  }
+
+  .\!text-#{$align} {
+    text-align: map_get($text-aligns, $align) !important;
+  }
+}
+
+@each $style in map_keys($text-styles) {
+  .text-#{$style} {
+    font-style: map_get($text-styles, $style);
+  }
+
+  .\!text-#{$style} {
+    font-style: map_get($text-styles, $style) !important;
+  }
+}
+
+@each $color in map_keys($text-colors) {
+  .text-#{$color} {
+    color: map-get($text-colors, $color);
+
+    @if ($color == 'link') {
+      cursor: pointer;
+      text-decoration: none;
+      transition: color .1s linear;
+
+      &:hover {
+        color: darken(map-get($text-colors, 'link'), 20%);
+        text-decoration: none;
+      }
+    }
+  }
+
+  .\!text-#{$color} {
+    color: map-get($text-colors, $color) !important;
+
+    @if ($color == 'link') {
+      cursor: pointer !important;
+      text-decoration: none !important;
+      transition: color .1s linear !important;
+
+      &:hover {
+        color: darken(map-get($text-colors, 'link'), 20%) !important;
+        text-decoration: none !important;
+      }
+    }
+  }
+}
+
+

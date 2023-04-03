@@ -1,0 +1,33 @@
+$box-shadow: $sakit-box-shadow;
+$shadow-sizes: (
+  xsmall: 0 1px 5px 0,
+  small: 0 2px 5px 0,
+  large: 0 4px 5px 0
+);
+
+.shadow {
+  box-shadow: $box-shadow;
+
+  &-remove {
+    box-shadow: initial;
+  }
+}
+
+.\!shadow {
+  box-shadow: $box-shadow !important;
+
+  &-remove {
+    box-shadow: initial !important;
+  }
+}
+
+
+@each $shadow-size in map-keys($shadow-sizes) {
+  .shadow-#{$shadow-size} {
+    box-shadow: map-get($shadow-sizes, $shadow-size) $sakit-shadow-color;
+  }
+
+  .\!shadow-#{$shadow-size} {
+    box-shadow: map-get($shadow-sizes, $shadow-size) $sakit-shadow-color !important;
+  }
+}

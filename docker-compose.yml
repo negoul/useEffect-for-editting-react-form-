@@ -1,0 +1,14 @@
+version: '3.3'
+
+services:
+  walletfront:
+    build:
+      context: .
+      dockerfile: docker/prod.Dockerfile
+    container_name: wallet-front 
+    env_file:
+      - src/environment/.env.production
+    ports:
+      - "3007:80/tcp"
+    volumes:
+      - '/app/node_modules'

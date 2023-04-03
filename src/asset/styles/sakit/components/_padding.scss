@@ -1,0 +1,368 @@
+@import "../mixins/responsive";
+$padding-step-size: $sakit-padding-step;
+
+$padding-sizes: (
+  $padding-step-size * 1,
+  $padding-step-size * 2,
+  $padding-step-size * 3,
+  $padding-step-size * 4,
+  $padding-step-size * 5,
+  $padding-step-size * 6,
+  $padding-step-size * 7,
+  $padding-step-size * 8,
+  $padding-step-size * 9,
+  $padding-step-size * 10,
+  $padding-step-size * 11,
+  $padding-step-size * 12,
+  $padding-step-size * 13,
+  $padding-step-size * 14,
+  $padding-step-size * 15,
+  $padding-step-size * 16,
+  $padding-step-size * 17,
+  $padding-step-size * 18,
+  $padding-step-size * 19,
+  $padding-step-size * 20,
+  $padding-step-size * 21,
+  $padding-step-size * 22,
+  $padding-step-size * 23,
+  $padding-step-size * 24,
+  $padding-step-size * 25
+);
+
+@each $padding in $padding-sizes {
+  .padding {
+    &-#{$padding} {
+      padding: #{$padding}px;
+
+      &\@xs {
+        @include screen-xsmall {
+          padding: #{$padding}px;
+        }
+      }
+
+      &\@s {
+        @include screen-small {
+          padding: #{$padding}px;
+        }
+      }
+
+      &\@m {
+        @include screen-medium {
+          padding: #{$padding}px;
+        }
+      }
+
+      &\@l {
+        @include screen-large {
+          padding: #{$padding}px;
+        }
+      }
+
+      &\@xl {
+        @include screen-xlarge {
+          padding: #{$padding}px;
+        }
+      }
+
+      &\@xxl {
+        @include screen-xxlarge {
+          padding: #{$padding}px;
+        }
+      }
+    }
+
+    &-horizontal-#{$padding} {
+      padding-right: #{$padding}px;
+      padding-left: #{$padding}px;
+
+      &\@xs {
+        @include screen-xsmall {
+          padding-right: #{$padding}px;
+          padding-left: #{$padding}px;
+        }
+      }
+
+      &\@s {
+        @include screen-small {
+          padding-right: #{$padding}px;
+          padding-left: #{$padding}px;
+        }
+      }
+
+      &\@m {
+        @include screen-medium {
+          padding-right: #{$padding}px;
+          padding-left: #{$padding}px;
+        }
+      }
+
+      &\@l {
+        @include screen-large {
+          padding-right: #{$padding}px;
+          padding-left: #{$padding}px;
+        }
+      }
+
+      &\@xl {
+        @include screen-xlarge {
+          padding-right: #{$padding}px;
+          padding-left: #{$padding}px;
+        }
+      }
+
+      &\@xxl {
+        @include screen-xxlarge {
+          padding-right: #{$padding}px;
+          padding-left: #{$padding}px;
+        }
+      }
+    }
+
+    &-vertical-#{$padding} {
+      padding-top: #{$padding}px;
+      padding-bottom: #{$padding}px;
+
+      &\@xs {
+        @include screen-xsmall {
+          padding-top: #{$padding}px;
+          padding-bottom: #{$padding}px;
+        }
+      }
+
+      &\@s {
+        @include screen-small {
+          padding-top: #{$padding}px;
+          padding-bottom: #{$padding}px;
+        }
+      }
+
+      &\@m {
+        @include screen-medium {
+          padding-top: #{$padding}px;
+          padding-bottom: #{$padding}px;
+        }
+      }
+
+      &\@l {
+        @include screen-large {
+          padding-top: #{$padding}px;
+          padding-bottom: #{$padding}px;
+        }
+      }
+
+      &\@xl {
+        @include screen-xlarge {
+          padding-top: #{$padding}px;
+          padding-bottom: #{$padding}px;
+        }
+      }
+
+      &\@xxl {
+        @include screen-xxlarge {
+          padding-top: #{$padding}px;
+          padding-bottom: #{$padding}px;
+        }
+      }
+    }
+
+    &-top-#{$padding} {
+      padding-top: #{$padding}px;
+    }
+
+    &-right-#{$padding} {
+      padding-right: #{$padding}px;
+    }
+
+    &-bottom-#{$padding} {
+      padding-bottom: #{$padding}px;
+    }
+
+    &-left-#{$padding} {
+      padding-left: #{$padding}px;
+    }
+  }
+
+  .\!padding {
+    &-#{$padding} {
+      padding: #{$padding}px !important;
+
+      &\@xs {
+        @include screen-xsmall {
+          padding: #{$padding}px !important;
+        }
+      }
+
+      &\@s {
+        @include screen-small {
+          padding: #{$padding}px !important;
+        }
+      }
+
+      &\@m {
+        @include screen-medium {
+          padding: #{$padding}px !important;
+        }
+      }
+
+      &\@l {
+        @include screen-large {
+          padding: #{$padding}px !important;
+        }
+      }
+
+      &\@xl {
+        @include screen-xlarge {
+          padding: #{$padding}px !important;
+        }
+      }
+
+      &\@xxl {
+        @include screen-xxlarge {
+          padding: #{$padding}px !important;
+        }
+      }
+    }
+
+    &-horizontal-#{$padding} {
+      padding-right: #{$padding}px !important;
+      padding-left: #{$padding}px !important;
+
+      &\@xs {
+        @include screen-xsmall {
+          padding-right: #{$padding}px !important;
+          padding-left: #{$padding}px !important;
+        }
+      }
+
+      &\@s {
+        @include screen-small {
+          padding-right: #{$padding}px !important;
+          padding-left: #{$padding}px !important;
+        }
+      }
+
+      &\@m {
+        @include screen-medium {
+          padding-right: #{$padding}px !important;
+          padding-left: #{$padding}px !important;
+        }
+      }
+
+      &\@l {
+        @include screen-large {
+          padding-right: #{$padding}px !important;
+          padding-left: #{$padding}px !important;
+        }
+      }
+
+      &\@xl {
+        @include screen-xlarge {
+          padding-right: #{$padding}px !important;
+          padding-left: #{$padding}px !important;
+        }
+      }
+
+      &\@xxl {
+        @include screen-xxlarge {
+          padding-right: #{$padding}px !important;
+          padding-left: #{$padding}px !important;
+        }
+      }
+    }
+
+    &-vertical-#{$padding} {
+      padding-top: #{$padding}px !important;
+      padding-bottom: #{$padding}px !important;
+
+      &\@xs {
+        @include screen-xsmall {
+          padding-top: #{$padding}px !important;
+          padding-bottom: #{$padding}px !important;
+        }
+      }
+
+      &\@s {
+        @include screen-small {
+          padding-top: #{$padding}px !important;
+          padding-bottom: #{$padding}px !important;
+        }
+      }
+
+      &\@m {
+        @include screen-medium {
+          padding-top: #{$padding}px !important;
+          padding-bottom: #{$padding}px !important;
+        }
+      }
+
+      &\@l {
+        @include screen-large {
+          padding-top: #{$padding}px !important;
+          padding-bottom: #{$padding}px !important;
+        }
+      }
+
+      &\@xl {
+        @include screen-xlarge {
+          padding-top: #{$padding}px !important;
+          padding-bottom: #{$padding}px !important;
+        }
+      }
+
+      &\@xxl {
+        @include screen-xxlarge {
+          padding-top: #{$padding}px !important;
+          padding-bottom: #{$padding}px !important;
+        }
+      }
+    }
+
+    &-top-#{$padding} {
+      padding-top: #{$padding}px !important;
+    }
+
+    &-right-#{$padding} {
+      padding-right: #{$padding}px !important;
+    }
+
+    &-bottom-#{$padding} {
+      padding-bottom: #{$padding}px !important;
+    }
+
+    &-left-#{$padding} {
+      padding-left: #{$padding}px !important;
+    }
+  }
+}
+
+.padding-remove {
+  & {
+    padding: 0;
+  }
+
+  &-horizontal {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  &-vertical {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.\!padding-remove {
+  & {
+    padding: 0 !important;
+  }
+
+  &-horizontal {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  &-vertical {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+}

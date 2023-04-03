@@ -1,0 +1,55 @@
+@import '../../asset/styles/mixins/index';
+
+.login {
+  height: calc(100vh - 8rem);
+
+  @media all and (max-width: 40rem) {
+    height: 125vh !important;
+  }
+
+  &__container {
+    & > div {
+      width: 29rem;
+
+      & > div > div {
+        @include small-mobile {
+          padding: 3rem 1.5rem !important;
+        }
+      }
+
+      & > div:first-child {
+        min-height: 32rem;
+      }
+
+      @include screen-xs {
+        width: 32rem;
+      }
+
+      @include screen-md {
+        width: 41rem;
+      }
+    }
+  }
+
+  &__input {
+    height: 4.5rem !important;
+  }
+}
+
+.timer {
+  min-height: 4rem;
+}
+
+.logo {
+  width: 140px;
+  margin-top: 50px;
+}
+
+.captcha_refresh_icon {
+  border-radius: 3.5rem !important;
+  -webkit-border-radius: 3.5rem !important;
+  -moz-border-radius: 3.5rem !important;
+  cursor: pointer;
+  height: 3.5rem;
+  width: 3.5rem;
+}

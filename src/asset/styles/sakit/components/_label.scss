@@ -1,0 +1,74 @@
+$transition: $sakit-label-transition;
+$size-base: $sakit-label-size-base;
+$border-size-base: $sakit-label-border-size-base;
+$border-radius-size-base: $sakit-label-border-radius-size-base;
+$font-size: $sakit-label-font-size-base;
+$hover-percentage: $sakit-label-hover-percentage;
+$label-colors: (
+  'default': (background: $sakit-label-background-color-default, color: $sakit-label-color-default),
+  'info': (background: $sakit-label-background-color-info, color: $sakit-label-color-info),
+  'danger': (background: $sakit-label-background-color-danger, color: $sakit-label-color-danger),
+  'warning': (background: $sakit-label-background-color-warning, color: $sakit-label-color-warning),
+  'success': (background: $sakit-label-background-color-success, color: $sakit-label-color-success)
+);
+
+@each $color in map_keys($label-colors) {
+  .label {
+    &-circle-#{$color} {
+      background: map_get(map_get($label-colors, $color), background);
+      color: map_get(map_get($label-colors, $color), color);
+      width: $size-base;
+      height: $size-base;
+      border-radius: $size-base * 2;
+      border-width: $border-size-base;
+      border-style: solid;
+      display: inline-flex;
+      justify-content: center;
+      font-size: $size-base / 1.529;
+      line-height: $size-base;
+
+      &-small {
+        @extend .label-circle-#{$color};
+        height: $size-base / 1.42;
+        width: $size-base / 1.42;
+        line-height: $size-base / 1.42;
+        font-size: $size-base / 1.75;
+      }
+    }
+
+    &-#{$color} {
+      white-space: nowrap;
+      border-radius: $border-radius-size-base;
+      padding: 2px 8px;
+      font-size: $font-size;
+      color: map_get(map_get($label-colors, $color), color);
+      background: map_get(map_get($label-colors, $color), background);
+      transition: background $transition;
+      &:hover {
+        background: darken(map_get(map_get($label-colors, $color), background), $hover-percentage);
+      }
+
+      &-small {
+        @extend .label-#{$color};
+        font-size: calc(#{$font-size} - 2px);
+        padding: 1px 8px;
+      }
+    }
+
+    &-round-#{$color} {
+      @extend .label-#{$color};
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      border-radius: 20px;
+
+      &-small {
+        @extend .label-#{$color}-small;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
+      }
+    }
+  }
+}
+
+

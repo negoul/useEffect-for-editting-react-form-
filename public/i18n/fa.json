@@ -1,0 +1,21 @@
+{
+  "app": {
+    "defaultTitle": "رمز ارز",
+    "defaultSiteName": "رمز ارز",
+    "defaultDescription": "رمز ارز"
+  },
+  "details": {
+    "user-label": "کاربر",
+    "provider-label": "تامین کننده",
+    "traceRequestID-label": "شماره پیگیری",
+    "requestType-label": "نوع درخواست",
+    "createTime-label": "زمان ایجاد",
+    "requestTime-label": "زمان درخواست تامین کننده",
+    "responseTime-label": "زمان پاسخ تامین کننده",
+    "responseCode-label": "کد پاسخ تامین کننده",
+    "responseMessage-label": "پیام پاسخ تامین کننده",
+    "responseDesc-label": "شرح پاسخ تامین کننده",
+    "ip-label": "IP",
+    "result-label": "نتیجه"
+  }
+}

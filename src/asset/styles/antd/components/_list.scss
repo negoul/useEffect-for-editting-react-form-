@@ -1,0 +1,36 @@
+$list-hover: darken($white-color, 1.96);
+
+.ant-list-item {
+  position: relative;
+  transition: background-color var(--transition);
+
+  &.selected-item {
+    &::after {
+      content: '';
+      width: 4px;
+      height: 100%;
+      background-color: var(--primary-color);
+      top: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+    }
+  }
+
+  &-meta-description, &-meta-title {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  &-meta.ltr &-meta-title {
+    direction: ltr;
+  }
+
+  &:hover {
+    background-color: $list-hover;
+    cursor: pointer;
+  }
+}

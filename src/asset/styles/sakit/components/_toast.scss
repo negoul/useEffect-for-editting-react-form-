@@ -1,0 +1,159 @@
+$padding: 10px 20px;
+$border-radius: $sakit-toast-border-radius;
+$hover-amount: $sakit-toast-hover-percentage;
+$transition: $sakit-toast-transition;
+
+
+$toast-colors: (
+  'default': (
+    background: $sakit-toast-background-color-default,
+    color: $sakit-toast-color-default,
+  ),
+  'info': (
+    background: $sakit-toast-background-color-info,
+    color: $sakit-toast-color-info,
+  ),
+  'danger': (
+    background: $sakit-toast-background-color-danger,
+    color: $sakit-toast-color-danger,
+  ),
+  'warning': (
+    background: $sakit-toast-color-warning,
+    color: $sakit-toast-background-color-warning,
+  ),
+  'success': (
+    background: $sakit-toast-color-success,
+    color: $sakit-toast-color-success,
+  )
+);
+
+.parent__saffron-toast {
+  overflow: hidden !important;
+  position: relative !important;
+}
+
+.saffron-toast {
+  left: 0;
+  right: 0;
+  top: 0;
+  transform: translateY(-100px);
+  transition: transform $transition;
+  z-index: 999;
+
+  &.rtl {
+    .saffron-toast__icon {
+      margin-left: 10px;
+    }
+
+    .saffron-toast__button--reject {
+      margin-left: 5px;
+    }
+  }
+
+  .ltr {
+    .saffron-toast__icon {
+      margin-left: 10px;
+    }
+
+    .saffron-toast__button--reject {
+      margin-right: 5px;
+    }
+  }
+
+  &--absolute {
+    position: absolute !important;
+  }
+
+  &--open {
+    transform: translateY(0);
+  }
+
+  &__wrapper {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    padding: $padding;
+    position: relative;
+  }
+
+  &__icon {
+    align-items: center;
+    display: inline-flex;
+  }
+
+  &__close {
+    display: inline-flex;
+    cursor: pointer;
+    margin-left: 10px;
+    opacity: .7;
+    padding: 4px;
+    transition: opacity $transition;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__content {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+  }
+
+  &__text {
+    font-size: 1.4rem;
+  }
+
+  &__button {
+    border: 1px solid;
+    border-radius: $border-radius;
+    cursor: pointer;
+    font-family: inherit;
+    outline: unset;
+    padding: 3px 10px;
+    transition: background $transition;
+
+    &--reject {
+      background: $sakit-toast-reject-background-color;
+      border-color: #c8ced3;
+      color: #666;
+
+      &:hover {
+        background: darken($sakit-toast-reject-background-color, $hover-amount);
+      }
+    }
+  }
+
+  &__controller {
+    align-items: center;
+    display: inline-flex;
+  }
+
+  @each $color in map_keys($toast-colors) {
+    &--#{$color} {
+      background: map_get(map_get($toast-colors, $color), background);
+      color: map_get(map_get($toast-colors, $color), color);
+
+      & .saffron-toast__button--confirm {
+        background: map_get(map_get($toast-colors, $color), color);
+        border-color: map_get(map_get($toast-colors, $color), color);
+        color: #fff;
+
+        &:hover {
+          background: darken(map_get(map_get($toast-colors, $color), color), $hover-amount);
+        }
+      }
+    }
+
+    &__progress--#{$color} {
+      background: darken(map_get(map_get($toast-colors, $color), background), 10%);
+
+      .progress__content {
+        background: map_get(map_get($toast-colors, $color), color);
+        height: 3px;
+      }
+    }
+  }
+}
+

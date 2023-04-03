@@ -1,0 +1,76 @@
+{
+  "name": "empty-react-app",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@ant-design/charts": "^1.4.2",
+    "@ant-design/plots": "^1.2.2",
+    "@sakit-sa/react-authorize": "^1.2.1",
+    "@sakit-sa/react-button": "^1.1.0",
+    "@sakit-sa/react-master-detail": "^1.0.14",
+    "@sentry/react": "^6.17.3",
+    "@sentry/tracing": "^6.17.3",
+    "antd": "^4.18.5",
+    "antd-jalali": "^0.9.4",
+    "axios": "^0.21.1",
+    "dayjs": "^1.11.2",
+    "env-cmd": "^10.1.0",
+    "history": "^4.10.1",
+    "i18next": "^20.2.2",
+    "i18next-xhr-backend": "^3.2.2",
+    "jalali-moment": "^3.3.11",
+    "keycloak-js": "^19.0.1",
+    "moment": "^2.29.1",
+    "moment-jalaali": "^0.9.4",
+    "node-sass": "^5.0.0",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-csv": "^2.2.2",
+    "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0",
+    "react-i18next": "^11.8.15",
+    "react-infinite-scroll-component": "^6.1.0",
+    "react-redux": "^7.2.4",
+    "react-router-dom": "^6.2.1",
+    "react-scripts": "^5.0.1",
+    "react-toastify": "^7.0.4",
+    "redux": "^4.1.0",
+    "redux-thunk": "^2.3.0",
+    "web-vitals": "^1.0.1",
+    "yarn": "^1.22.19"
+  },
+  "scripts": {
+    "start": "env-cmd -f ./src/environment/.env.development craco start",
+    "build": "npm run build:development",
+    "build:development": "env-cmd -f ./src/environment/.env.production craco build",
+    "build:production": "GENERATE_SOURCEMAP=false env-cmd -f ./src/environment/.env.production craco build",
+    "build:stage": "GENERATE_SOURCEMAP=false env-cmd -f ./src/environment/.env.staging craco build",
+    "test": "react-scripts test"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@craco/craco": "^6.0.0",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "craco-less": "^2.0.0",
+    "webpack-bundle-analyzer": "^4.5.0"
+  }
+}

@@ -1,0 +1,48 @@
+$left-step-size: $sakit-left-step;
+
+$left-sizes: (
+  $left-step-size * 0,
+  $left-step-size * 1,
+  $left-step-size * 2,
+  $left-step-size * 3,
+  $left-step-size * 4,
+  $left-step-size * 5,
+  $left-step-size * 6,
+  $left-step-size * 7,
+  $left-step-size * 8,
+  $left-step-size * 9,
+  $left-step-size * 10,
+  $left-step-size * 11,
+  $left-step-size * 12,
+  $left-step-size * 13,
+  $left-step-size * 14,
+  $left-step-size * 15,
+  $left-step-size * 16,
+  $left-step-size * 17,
+  $left-step-size * 18,
+  $left-step-size * 19,
+  $left-step-size * 20,
+  $left-step-size * 21,
+  $left-step-size * 22,
+  $left-step-size * 23,
+  $left-step-size * 24,
+  $left-step-size * 25
+);
+
+@each $size in $left-sizes {
+  .left-#{$size} {
+    left: #{$size}px;
+  }
+
+  .\!left-#{$size} {
+    left: #{$size}px !important;
+  }
+}
+
+.left-initial {
+  left: initial;
+}
+
+.\!left-initial {
+  left: initial !important;
+}

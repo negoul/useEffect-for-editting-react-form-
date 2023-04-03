@@ -1,0 +1,173 @@
+$width-step-size: $sakit-width-step;
+
+$width-sizes: (
+  $width-step-size * 1,
+  $width-step-size * 2,
+  $width-step-size * 3,
+  $width-step-size * 4,
+  $width-step-size * 5,
+  $width-step-size * 6,
+  $width-step-size * 7,
+  $width-step-size * 8,
+  $width-step-size * 9,
+  $width-step-size * 10,
+  $width-step-size * 11,
+  $width-step-size * 12,
+  $width-step-size * 13,
+  $width-step-size * 14,
+  $width-step-size * 15,
+  $width-step-size * 16,
+  $width-step-size * 17,
+  $width-step-size * 18,
+  $width-step-size * 19,
+  $width-step-size * 20,
+  $width-step-size * 21,
+  $width-step-size * 22,
+  $width-step-size * 23,
+  $width-step-size * 24,
+  $width-step-size * 25
+);
+
+@each $size in $width-sizes {
+  .width-#{$size} {
+    width: #{$size}px;
+  }
+
+  .\!width-#{$size} {
+    width: #{$size}px !important;
+  }
+
+  .min-width-#{$size} {
+    min-width: #{$size}px;
+  }
+
+  .\!min-width-#{$size} {
+    min-width: #{$size}px !important;
+  }
+
+  .max-width-#{$size} {
+    max-width: #{$size}px;
+  }
+
+  .\!max-width-#{$size} {
+    max-width: #{$size}px !important;
+  }
+}
+
+.width-expand {
+  width: 100%;
+   &\@xs {
+     @include screen-xsmall {
+       width: 100%;
+     }
+   }
+
+   &\@s {
+     @include screen-small {
+       width: 100%;
+     }
+   }
+
+   &\@m {
+     @include screen-medium {
+       width: 100%;
+     }
+   }
+
+   &\@l {
+     @include screen-large {
+       width: 100%;
+     }
+   }
+
+   &\@xl {
+     @include screen-xlarge {
+       width: 100%;
+     }
+   }
+
+   &\@xxl {
+     @include screen-xxlarge {
+       width: 100%;
+     }
+   }
+}
+
+.\!width-expand {
+  width: 100% !important;
+   &\@xs {
+     @include screen-xsmall {
+       width: 100% !important;
+     }
+   }
+
+   &\@s {
+     @include screen-small {
+       width: 100% !important;
+     }
+   }
+
+   &\@m {
+     @include screen-medium {
+       width: 100% !important;
+     }
+   }
+
+   &\@l {
+     @include screen-large {
+       width: 100% !important;
+     }
+   }
+
+   &\@xl {
+     @include screen-xlarge {
+       width: 100% !important;
+     }
+   }
+
+   &\@xxl {
+     @include screen-xxlarge {
+       width: 100% !important;
+     }
+   }
+}
+
+.min-width-expand {
+  min-width: 100%;
+}
+
+.\!min-width-expand {
+  min-width: 100% !important;
+}
+
+.width-auto {
+  width: auto ;
+}
+
+.\!width-auto {
+  width: auto !important;
+}
+
+.width-initial {
+  width: initial;
+}
+
+.\!width-initial {
+  width: initial !important;
+}
+
+.max-width-initial {
+  max-width: initial;
+}
+
+.\!max-width-initial {
+  max-width: initial !important;
+}
+
+.min-width-initial {
+  min-width: initial;
+}
+
+.\!min-width-initial {
+  min-width: initial !important;
+}

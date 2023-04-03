@@ -1,0 +1,117 @@
+@import "../../colors";
+$sakit-primary-color: $primary-color;
+$sakit-primary-light-color: $primary-light-color;
+$sakit-secondary-color: $secondary-color;
+$sakit-shadow-color: $shadow-color;
+$sakit-white-color: $white-color;
+$sakit-muted-color: $muted-color;
+$sakit-muted-light-color: $muted-light-color;
+$sakit-black-color: $black-color;
+$sakit-dark-color: $dark-color;
+$sakit-link-color: $link-color;
+$sakit-link-light-color: $link-light-color;
+$sakit-danger-color: $danger-color;
+$sakit-danger-light-color: $danger-light-color;
+$sakit-warning-color: $warning-color;
+$sakit-warning-light-color: $warning-light-color;
+
+// BORDER
+$sakit-border-color: lighten($muted-color, 32.94);
+
+// LABEL
+$sakit-label-color-default: $sakit-dark-color;
+$sakit-label-color-info: $link-color;
+$sakit-label-color-danger: $danger-color;
+$sakit-label-color-warning: $warning-color;
+$sakit-label-color-success: $primary-color;
+$sakit-label-background-color-default: $muted-light-color;
+$sakit-label-background-color-info: $link-light-color;
+$sakit-label-background-color-danger: $danger-light-color;
+$sakit-label-background-color-warning: $warning-light-color;
+$sakit-label-background-color-success: $primary-light-color;
+$sakit-label-reject-background-color: $white-color;
+
+// TOAST
+$sakit-toast-color-default: $sakit-dark-color;
+$sakit-toast-color-info: $link-color;
+$sakit-toast-color-danger: $danger-color;
+$sakit-toast-color-warning: $warning-color;
+$sakit-toast-color-success: $primary-color;
+$sakit-toast-background-color-default: $muted-light-color;
+$sakit-toast-background-color-info: $link-light-color;
+$sakit-toast-background-color-danger: $danger-light-color;
+$sakit-toast-background-color-warning: $warning-light-color;
+$sakit-toast-background-color-success: $primary-light-color;
+$sakit-toast-reject-background-color: $white-color;
+
+// SCROLL
+$sakit-scroll-track-color-default: lighten($muted-color, 29.80);
+$sakit-scroll-thumb-border-color-default: lighten($muted-color, 21.18);
+$sakit-scroll-modern-track-color-default: lighten(adjust-hue($muted-light-color, -16), 1.96);
+$sakit-scroll-modern-thumb-border-color-default: lighten(saturate(adjust-hue($muted-color, 215), 16.81), 19.80);
+
+// SCROLL-TO
+$sakit-scroll-to-color-default: $white-color;
+$sakit-scroll-to-color-primary: $primary-color;
+$sakit-scroll-to-color-secondary: $secondary-color;
+$sakit-scroll-to-color-danger: $danger-color;
+$sakit-scroll-to-color-warning: $warning-color;
+$sakit-scroll-to-color-info: $link-color;
+$sakit-scroll-to-dark-text: $dark-color;
+$sakit-scroll-to-light-text: $white-color;
+
+
+//
+//:root {
+//  --sakit-primary-color: calc(#{$primary-color});
+//  --sakit-primary-color-rgb: calc(#{$primary-color-rgb});
+//  --sakit-primary-light-color: calc(#{$primary-light-color});
+//  --sakit-primary-light-color-rgb: calc(#{$primary-light-color-rgb});
+//  --sakit-secondary-color: calc(#{$secondary-color});
+//  --sakit-secondary-color-rgb: calc(#{$secondary-color-rgb});
+//  --sakit-shadow-color: calc(#{$shadow-color});
+//  --sakit-white-color: calc(#{$white-color});
+//  --sakit-white-color-rgb: calc(#{$white-color-rgb});
+//  --sakit-muted-color: calc(#{$muted-color});
+//  --sakit-muted-color-rgb: calc(#{$muted-color-rgb});
+//  --sakit-muted-light-color: calc(#{$muted-light-color});
+//  --sakit-muted-light-color-rgb: calc(#{$muted-light-color-rgb});
+//  --sakit-black-color: calc(#{$black-color});
+//  --sakit-black-color-rgb: calc(#{$black-color-rgb});
+//  --sakit-dark-color: calc(#{$dark-color});
+//  --sakit-dark-color-rgb: calc(#{$dark-color-rgb});
+//  --sakit-link-color: calc(#{$link-color});
+//  --sakit-link-color-rgb: calc(#{$link-color-rgb});
+//  --sakit-link-light-color: calc(#{$link-light-color});
+//  --sakit-link-light-color-rgb: calc(#{$link-light-color-rgb});
+//  --sakit-danger-color: calc(#{$danger-color});
+//  --sakit-danger-color-rgb: calc(#{$danger-color-rgb});
+//  --sakit-danger-light-color: calc(#{$danger-light-color});
+//  --sakit-danger-light-color-rgb: calc(#{$danger-light-color-rgb});
+//  --sakit-warning-color: calc(#{$warning-color});
+//  --sakit-warning-color-rgb: calc(#{$warning-color-rgb});
+//  --sakit-warning-light-color: calc(#{$warning-light-color});
+//  --sakit-warning-light-color-rgb: calc(#{$warning-light-color-rgb});
+//
+//
+//  --sakit-toast-color-default: calc(#{$dark-color});
+//  --sakit-toast-color-default-dark: darken(calc(#{$dark-color}), 6%);
+//  --sakit-toast-color-info: calc(#{$link-color});
+//  --sakit-toast-color-info-dark: darken(calc(#{$link-color}), 6%);
+//  --sakit-toast-color-danger: calc(#{$danger-color});
+//  --sakit-toast-color-danger-dark: darken(calc(#{$danger-color}), 6%);
+//  --sakit-toast-color-warning: calc(#{$warning-color});
+//  --sakit-toast-color-warning-dark: darken(calc(#{$warning-color}), 6%);
+//  --sakit-toast-color-success: calc(#{$primary-color});
+//  --sakit-toast-color-success-dark: darken(calc(#{$primary-color}), 6%);
+//  --sakit-toast-background-color-default: calc(#{$muted-light-color});
+//  --sakit-toast-background-color-default-rgb: #dee2e9;
+//  --sakit-toast-background-color-info: calc(#{$link-light-color});
+//  --sakit-toast-background-color-info-rgb: calc(#{$link-light-color-rgb});
+//  --sakit-toast-background-color-danger: calc(#{$danger-light-color});
+//  --sakit-toast-background-color-danger-rgb: calc(#{$danger-light-color-rgb});
+//  --sakit-toast-background-color-warning: calc(#{$warning-light-color});
+//  --sakit-toast-background-color-warning-rgb: calc(#{$warning-light-color-rgb});
+//  --sakit-toast-background-color-success: calc(#{$primary-light-color});
+//  --sakit-toast-background-color-success-rgb: calc(#{$primary-light-color-rgb});
+//}

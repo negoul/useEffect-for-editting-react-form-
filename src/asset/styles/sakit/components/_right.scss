@@ -1,0 +1,48 @@
+$right-step-size: $sakit-right-step;
+
+$right-sizes: (
+  $right-step-size * 0,
+  $right-step-size * 1,
+  $right-step-size * 2,
+  $right-step-size * 3,
+  $right-step-size * 4,
+  $right-step-size * 5,
+  $right-step-size * 6,
+  $right-step-size * 7,
+  $right-step-size * 8,
+  $right-step-size * 9,
+  $right-step-size * 10,
+  $right-step-size * 11,
+  $right-step-size * 12,
+  $right-step-size * 13,
+  $right-step-size * 14,
+  $right-step-size * 15,
+  $right-step-size * 16,
+  $right-step-size * 17,
+  $right-step-size * 18,
+  $right-step-size * 19,
+  $right-step-size * 20,
+  $right-step-size * 21,
+  $right-step-size * 22,
+  $right-step-size * 23,
+  $right-step-size * 24,
+  $right-step-size * 25
+);
+
+@each $size in $right-sizes {
+  .right-#{$size} {
+    right: #{$size}px;
+  }
+
+  .\!right-#{$size} {
+    right: #{$size}px !important;
+  }
+}
+
+.right-initial {
+  right: initial;
+}
+
+.\!right-initial {
+  right: initial !important;
+}

@@ -1,0 +1,84 @@
+$radius-sizes: (
+  radius-xxsmall: calc(#{$sakit-border-radius-base} + #{$sakit-border-radius-step} * 0), // 2
+  radius-xsmall: calc(#{$sakit-border-radius-base} + #{$sakit-border-radius-step} * 1), // 4
+  radius-small: calc(#{$sakit-border-radius-base} + #{$sakit-border-radius-step} * 2), // 6
+  radius: calc(#{$sakit-border-radius-base} + #{$sakit-border-radius-step} * 3), // 8
+  radius-large: calc(#{$sakit-border-radius-base} + #{$sakit-border-radius-step} * 4),
+  radius-xlarge: calc(#{$sakit-border-radius-base} + #{$sakit-border-radius-step} * 5),
+  radius-xxlarge: calc(#{$sakit-border-radius-base} + #{$sakit-border-radius-step} * 6),
+  radius-circle: 500px
+);
+
+$border-types: (
+  dashed: dashed,
+  solid: solid
+);
+
+$border-directions: (
+  top: top,
+  bottom: bottom,
+);
+
+@mixin getBorderDirection($direction, $border-type, $border-color, $is-important: false) {
+  @if ($is-important == false) {
+    @if ($direction == top) {
+      border-top: 1px $border-type $border-color;
+    } @else if ($direction == right) {
+      border-right: 1px $border-type $border-color;
+    } @else if ($direction == left) {
+      border-left: 1px $border-type $border-color;
+    } @else {
+      border-bottom: 1px $border-type $border-color;
+    }
+  } @else {
+    @if ($direction == top) {
+      border-top: 1px $border-type $border-color !important;
+    } @else if ($direction == right) {
+      border-right: 1px $border-type $border-color !important;
+    } @else if ($direction == left) {
+      border-left: 1px $border-type $border-color !important;
+    } @else {
+      border-bottom: 1px $border-type $border-color !important;
+    }
+  }
+}
+
+@each $name in map-keys($radius-sizes) {
+  .border-#{$name} {
+    border-radius: map_get($radius-sizes, $name);
+  }
+
+  .\!border-#{$name} {
+    border-radius: map_get($radius-sizes, $name) !important;
+  }
+}
+
+@each $type in map-keys($border-types) {
+  .border-#{$type} {
+    border: 1px $type $sakit-border-color;
+
+    @each $direction in map-keys($border-directions) {
+      &-#{$direction} {
+        @include getBorderDirection($direction, map-get($border-types, $type), $sakit-border-color);
+      }
+    }
+  }
+
+  .\!border-#{$type} {
+    border: 1px $type $sakit-border-color !important;
+
+    @each $direction in map-keys($border-directions) {
+      &-#{$direction} {
+        @include getBorderDirection($direction, map-get($border-types, $type), $sakit-border-color, true);
+      }
+    }
+  }
+}
+
+.border-remove {
+  border: initial;
+}
+
+.\!border-remove {
+  border: initial !important;
+}

@@ -1,0 +1,19 @@
+$background-colors: (
+  default: $sakit-white-color,
+  muted: $sakit-muted-color,
+  light-muted: $sakit-muted-light-color,
+  transparent: transparent,
+  black: $sakit-black-color,
+  primary: $sakit-primary-color,
+  secondary: $sakit-secondary-color
+);
+
+@each $color in map_keys($background-colors) {
+  .background-#{$color} {
+    background: map_get($background-colors, $color);
+  }
+
+  .\!background-#{$color} {
+    background: map_get($background-colors, $color) !important;
+  }
+}

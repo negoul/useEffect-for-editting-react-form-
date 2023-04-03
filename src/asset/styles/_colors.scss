@@ -1,0 +1,51 @@
+$primary-color: #00913e;
+$primary-light-color: #EDFBF6;
+$secondary-color: #001529;
+$shadow-color: rgba(#000000, .1);
+$white-color: #fff;
+$muted-color: #949494;
+$muted-light-color: #f0f2f5;
+$black-color: #000;
+$dark-color: #65676a;
+$link-color: #68b6ff;
+$link-light-color: #D8EAFC;
+$danger-color: #d93025;
+$danger-light-color: #FFE2EA;
+$warning-color: #fea619;
+$warning-light-color: #FFF0DC;
+
+:root {
+  --primary-color: #{$primary-color};
+  --primary-light-color: #{$primary-light-color};
+  --shadow-color: #{$shadow-color};
+  --white-color: #{$white-color};
+  --muted-color: #{$muted-color};
+  --muted-light-color: #{$muted-light-color};
+  --black-color: #{$black-color};
+  --dark-color: #{$dark-color};
+  --link-color: #{$link-color};
+  --link-light-color: #{$link-light-color};
+  --danger-color: #{$danger-color};
+  --danger-light-color: #{$danger-light-color};
+  --warning-color: #{$warning-color};
+  --warning-light-color: #{$warning-light-color};
+}
+
+
+//$secondary-color-dark: #02343b;
+//$background-color: #f7fbfc;
+//$title-color: #2E343E;
+//$text-color: #6F7782;
+//$error-title-color: #43587b;
+//$error-text-color: #546887;
+//$light-text-color: #f0f2f6;
+//$muted-color: #999;
+//$light-muted-color: #E7EBED;
+
+//$low-priority: #2ED4B3;
+//$medium-priority: #FF9E14;
+//$high-priority: #FF4073;
+
+//$warning-color: #FF5F16;
+//$success-color: #2ED4B3;
+//$draft-color: #3088d4;

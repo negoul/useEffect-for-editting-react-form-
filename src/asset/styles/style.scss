@@ -1,0 +1,74 @@
+@import "colors";
+@import "config";
+@import "sakit/style";
+@import "mixins/index";
+@import "components/index";
+@import "antd/style";
+@import "custome/sidebar";
+
+html, body, main {
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  @include primary-font-family();
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @include primary-font-family('bold');
+  margin: 0;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+p, span, a, legend, textarea, li, label, link {
+  @include primary-font-family('thin');
+}
+
+button, input, select {
+  @include primary-font-family('medium');
+}
+
+input::placeholder {
+  @include primary-font-family('medium');
+  color: $muted-color !important;
+}
+.header-title{
+  float: right;
+  font-size: 28px;
+  font-width: bold;
+  //text-shadow:1px 1px #6F7782;
+  color: #65676a;
+}
+.profile{
+  float: left;
+}
+
+.successTag{background-color: #00913e;
+  color: white;
+  width: 70%;
+}
+.failTag{background-color: rgba(236, 14, 14, 0.7);color: white; width: 70%;
+}
+
+.toggle{
+  background-color: transparent !important;
+  border: none !important;
+  color: black !important;
+}
+
+.toggle:hover{
+  background-color: transparent!important;
+  border : none !important;
+  color: black !important;
+}
+.toggle:active{
+  background-color: transparent!important;
+  border:none !important;
+  color: black !important;
+}
+
+

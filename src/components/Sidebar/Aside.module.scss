@@ -1,0 +1,28 @@
+@import '../../asset/styles/mixins/index';
+
+.asideWrapper {
+  position: relative;
+  padding-top: 18px;
+  &.drawer {
+    padding-top: 0;
+  }
+
+  .menu {
+    margin-top: 34px;
+  }
+
+  .h1 {
+    color: white !important;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo {
+    height: 32px;
+    margin: 16px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+  }
+
+}

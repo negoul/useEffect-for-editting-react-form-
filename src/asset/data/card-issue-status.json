@@ -1,0 +1,11 @@
+{
+  "WAITING_FOR_USER_IDENTITY": "در انتظار ارسال اطلاعات",
+  "WAITING_FOR_CARD_FRONT": "در انتظار ارسال تصویر جلو کارت ملی",
+  "WAITING_FOR_CARD_BACK": "در انتظار ارسال تصویر پشت کارت ملی",
+  "WAITING_FOR_VIDEO": "درانتظار ارسال ویدئو",
+  "WAITING_FOR_USER_CONFIRM": "در انتظار تایید نهایی توسط مشتری",
+  "WAITING_FOR_CARD_ISSUE": "آماده برای صدور کارت",
+  "SENT_FOR_CARD_ISSUE": "ارسال برای صدور کارت",
+  "SUCCESS": "کارت صادر شد",
+  "EXPIRED": "منقضی شد"
+}

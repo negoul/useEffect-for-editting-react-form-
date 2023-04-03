@@ -1,0 +1,29 @@
+$indexes: ('1-': -1, 0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 997: 997, 998: 998, 999: 999, 1000: 1000);
+
+@each $index in map_keys($indexes) {
+  .z-index {
+    &-#{$index} {
+      z-index: map_get($indexes, $index);
+    }
+
+    &\@m {
+      @include screen-medium {
+        z-index: map_get($indexes, $index);
+      }
+    }
+
+    &\@l {
+      @include screen-large {
+        z-index: map_get($indexes, $index);
+      }
+    }
+  }
+
+  .\!z-index {
+    &-#{$index} {
+      z-index: map_get($indexes, $index) !important;
+    }
+  }
+
+
+}
